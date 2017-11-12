@@ -1165,7 +1165,7 @@ set string[2]=Google is your friend.
 set /a idx=%random% %%3
 echo !string[%idx%]!
 exit /B 0
-:singmeasongfromyourchildhood
+:singmeasongofyourchildhood
 echo THE TING GOES SKKKKRRRRAAAA PAP PAP KAKA KA SKIPPEDI KAK KAK AND A PUR PUR POOOM BOOM SKYYYAAAA.
 exit /B 0
 :iputpineappleonmypizza
@@ -1478,7 +1478,7 @@ set choice=
 echo Ok. Lets play RPS %NAME% :)
 echo If you dont wanna play anymore just type something else.
 set /p input=(R)ock, (P)aper or (S)cissors ? 
-if not defined input goto kbmehr
+if not defined input goto rpskbmehr
 if /i "%input:"=%"=="r" set choice=0
 if /i "%input:"=%"=="rock" set choice=0
 if /i "%input:"=%"=="p" set choice=1
@@ -1569,4 +1569,11 @@ echo look at the txt I made for you (imagine a heart here)
 exit /B 0
 :warumhatphilipnichtangenommen
 echo he had pis in his diq
+exit /B 0
+:google
+setlocal enabledelayedexpansion
+echo Are you too dumb to open your Webbrowser ?
+echo Fine -.- What should I google?
+set /p "google="
+start www.google.com#q=%google%
 exit /B 0
